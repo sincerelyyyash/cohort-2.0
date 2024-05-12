@@ -17,7 +17,7 @@ export const Receiver = () => {
         const video = document.createElement('video');
         document.body.appendChild(video);
 
-        const pc = new RTCPeerConnection();
+        const pc = new RTCPeerConnection(); 
         pc.ontrack = (event) => {
             video.srcObject = new MediaStream([event.track]);
             video.play();
